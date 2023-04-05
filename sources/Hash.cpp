@@ -9,6 +9,7 @@ Hash::Hash(int V)
 
 void Hash::insertItem(string data)
 {
+
 }
 
 void Hash::deleteItem(int key)
@@ -17,6 +18,7 @@ void Hash::deleteItem(int key)
 
 int Hash::hashMe(int key)
 {
+    return (key % BUCKET);
 }
 
 void Hash::display()
