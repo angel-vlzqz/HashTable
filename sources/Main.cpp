@@ -24,16 +24,18 @@ int main()
     // hash.display();
 
     // testing file input into test vector
-    int input;
+    string input = "";
     int m = 0;
-    vector<int> intVector;
+    vector<string> intVector;
     ifstream myFile;
     myFile.open("TuSonrisa.txt");
 
-    while (myFile >> input)
+    while (!myFile.eof())
     {
+        myFile >> input;
         intVector.push_back(input);
-        cout << intVector[m] << "   ";
+        cout << intVector[m] << "  ";
         m++;
     }
+    myFile.close();
 }
