@@ -1,11 +1,8 @@
 #include <iostream>
-
 #include "Hash.hpp"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
-    std::cout << Add(1, 2) << std::endl;
-
-    return 0;
 }

@@ -2,7 +2,23 @@
 
 #include <iostream>
 
-int Add(int a, int b)
+Hash::Hash(int V)
 {
-    return a + b;
+    this->BUCKET = V;
+}
+
+void Hash::insertItem(string data)
+{
+}
+
+void Hash::deleteItem(int key)
+{
+}
+
+int Hash::hashMe(int key)
+{
+}
+
+void Hash::display()
+{
 }
