@@ -1,10 +1,10 @@
 #include "Hash.hpp"
-
 #include <iostream>
 
 Hash::Hash(int V)
 {
     this->BUCKET = V;
+    table = new list<int>[BUCKET];
 }
 
 void Hash::insertItem(int data)

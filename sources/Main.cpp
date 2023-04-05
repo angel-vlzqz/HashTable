@@ -18,6 +18,6 @@ int main()
     }
 
     hash.display();
-    hash.deleteItem(12);
+    hash.deleteItem(27);
     hash.display();
 }
