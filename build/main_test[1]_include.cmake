@@ -1,0 +1,5 @@
+if(EXISTS "/Users/vlzqz/school/AVelazquez-project7/build/main_test[1]_tests.cmake")
+  include("/Users/vlzqz/school/AVelazquez-project7/build/main_test[1]_tests.cmake")
+else()
+  add_test(main_test_NOT_BUILT main_test_NOT_BUILT)
+endif()

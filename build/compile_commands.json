@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/vlzqz/school/AVelazquez-project7/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin21-g++-12    -Wall -Wextra -Wshadow -std=c++20 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -o CMakeFiles/project.dir/sources/Main.cpp.o -c /Users/vlzqz/school/AVelazquez-project7/sources/Main.cpp",
+  "file": "/Users/vlzqz/school/AVelazquez-project7/sources/Main.cpp",
+  "output": "CMakeFiles/project.dir/sources/Main.cpp.o"
+},
+{
+  "directory": "/Users/vlzqz/school/AVelazquez-project7/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin21-g++-12    -Wall -Wextra -Wshadow -std=c++20 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -o CMakeFiles/project.dir/sources/Hash.cpp.o -c /Users/vlzqz/school/AVelazquez-project7/sources/Hash.cpp",
+  "file": "/Users/vlzqz/school/AVelazquez-project7/sources/Hash.cpp",
+  "output": "CMakeFiles/project.dir/sources/Hash.cpp.o"
+},
+{
+  "directory": "/Users/vlzqz/school/AVelazquez-project7/build",
+  "command": "/opt/homebrew/bin/aarch64-apple-darwin21-g++-12  -isystem /usr/local/include  -Wall -Wextra -Wshadow -std=c++20 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -o CMakeFiles/main_test.dir/tests/MainTest.cpp.o -c /Users/vlzqz/school/AVelazquez-project7/tests/MainTest.cpp",
+  "file": "/Users/vlzqz/school/AVelazquez-project7/tests/MainTest.cpp",
+  "output": "CMakeFiles/main_test.dir/tests/MainTest.cpp.o"
+}
+]
