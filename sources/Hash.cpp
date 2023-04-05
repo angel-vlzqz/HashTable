@@ -19,7 +19,7 @@ void Hash::deleteItem(int key)
     // find hash index
     int INDEX = hashMe(key);
 
-    //find key in index
+    // find key in index
     list<int>::iterator i;
     for (i = table[INDEX].begin(); i != table[INDEX].end(); i++)
     {
@@ -28,7 +28,7 @@ void Hash::deleteItem(int key)
             break;
         }
 
-        //if key is found, remove it
+        // if key is found, remove it
         if (i != table[INDEX].end())
         {
             table[INDEX].erase(i);
@@ -43,4 +43,13 @@ int Hash::hashMe(int key)
 
 void Hash::display()
 {
+    for (int i = 0; i < BUCKET; i++)
+    {
+        cout << i;
+        for (auto x : table[i])
+        {
+            cout << " --> " << x;
+            cout << endl;
+        }
+    }
 }
