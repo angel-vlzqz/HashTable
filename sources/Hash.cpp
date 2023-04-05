@@ -7,9 +7,10 @@ Hash::Hash(int V)
     this->BUCKET = V;
 }
 
-void Hash::insertItem(string data)
+void Hash::insertItem(int data)
 {
-
+    int INDEX = hashMe(data);
+    table[INDEX].push_back(data);
 }
 
 void Hash::deleteItem(int key)
