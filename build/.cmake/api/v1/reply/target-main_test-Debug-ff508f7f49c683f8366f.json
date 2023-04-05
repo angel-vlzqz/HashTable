@@ -21,7 +21,7 @@
 			"CMakeLists.txt",
 			"/usr/local/lib/cmake/GTest/GTestTargets.cmake",
 			"/usr/local/lib/cmake/GTest/GTestConfig.cmake",
-			"/opt/homebrew/Cellar/cmake/3.26.2/share/cmake/Modules/FindGTest.cmake"
+			"/opt/homebrew/Cellar/cmake/3.26.3/share/cmake/Modules/FindGTest.cmake"
 		],
 		"nodes" : 
 		[

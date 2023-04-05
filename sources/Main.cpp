@@ -1,16 +1,18 @@
 #include <iostream>
+#include <fstream>
+#include <vector>
 #include "Hash.hpp"
 
 using namespace std;
 
 int main()
 {
-    //array that contains keys
-    int test[] = {15, 11, 27, 8, 12};
+    // array that contains keys
+    int test[] = {69, 420, 36, 42, 43};
     int num = sizeof(test) / sizeof(test[0]);
 
-    //insert keys
-    Hash hash(5971);
+    // insert keys
+    Hash hash(7);
 
     for (int i = 0; i < num; i++)
     {
@@ -18,6 +20,20 @@ int main()
     }
 
     hash.display();
-    hash.deleteItem(27);
-    hash.display();
+    // hash.deleteItem(27);
+    // hash.display();
+
+    // testing file input into test vector
+    int input;
+    int m = 0;
+    vector<int> intVector;
+    ifstream myFile;
+    myFile.open("TuSonrisa.txt");
+
+    while (myFile >> input)
+    {
+        intVector.push_back(input);
+        cout << intVector[m] << "   ";
+        m++;
+    }
 }
