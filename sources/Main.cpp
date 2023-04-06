@@ -7,21 +7,17 @@ using namespace std;
 
 int main()
 {
-    // array that contains keys
-    int test[] = {69, 420, 36, 42, 43};
-    int num = sizeof(test) / sizeof(test[0]);
-
-    // insert keys
-    Hash hash(7);
-
-    for (int i = 0; i < num; i++)
-    {
-        hash.insertItem(test[i]);
-    }
-
-    hash.display();
-    // hash.deleteItem(27);
-    // hash.display();
+    //// array that contains keys
+    // int test[] = {69, 420, 36, 42, 43};
+    // int num = sizeof(test) / sizeof(test[0]);
+    //
+    //// insert keys
+    // Hash hash(7);
+    //
+    // for (int i = 0; i < num; i++)
+    //{
+    //    hash.insertItem(test[i]);
+    //}
 
     // testing file input into test vector
     string input = "";
@@ -30,9 +26,8 @@ int main()
     ifstream myFile;
     myFile.open("TuSonrisa.txt");
 
-    while (!myFile.eof())
+    while (myFile >> input)
     {
-        myFile >> input;
         intVector.push_back(input);
         cout << intVector[m] << "  ";
         m++;

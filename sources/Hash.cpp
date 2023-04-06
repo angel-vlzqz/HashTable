@@ -4,23 +4,23 @@
 Hash::Hash(int V)
 {
     this->BUCKET = V;
-    table = new list<int>[BUCKET];
+    table = new list<string>[BUCKET];
 }
 
-void Hash::insertItem(int data)
+void Hash::insertItem(string data)
 {
     // get hash index and insert
     int INDEX = hashMe(data);
     table[INDEX].push_back(data);
 }
 
-void Hash::deleteItem(int key)
+void Hash::deleteItem(string key) // WIP
 {
     // find hash index
     int INDEX = hashMe(key);
 
     // find key in index
-    list<int>::iterator i;
+    list<string>::iterator i;
     for (i = table[INDEX].begin(); i != table[INDEX].end(); i++)
     {
         if (*i == key)
@@ -36,9 +36,14 @@ void Hash::deleteItem(int key)
     }
 }
 
-int Hash::hashMe(int key)
+int Hash::hashMe(string key)
 {
-    return (key % BUCKET);
+    int sum = 0;
+    for (int i = 0; i < key.length(); i++)
+    {
+        sum += key[i];
+    }
+    return (sum % BUCKET);
 }
 
 void Hash::display()

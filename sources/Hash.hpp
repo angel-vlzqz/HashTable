@@ -6,14 +6,14 @@ using namespace std;
 class Hash
 {
     int BUCKET;       // number of buckets
-    list<int> *table; // pointer to array with buckets
+    list<string> *table; // pointer to array with buckets
 
 public:
     Hash(int V);
-    void insertItem(int item);
-    void deleteItem(int key);
+    void insertItem(string item);
+    void deleteItem(string key);
     void display();
 
 private:
-    int hashMe(int key);
+    int hashMe(string key);
 };
