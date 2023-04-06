@@ -22,15 +22,28 @@ int main()
     // testing file input into test vector
     string input = "";
     int m = 0;
-    vector<string> intVector;
+    vector<string> stringVector;
     ifstream myFile;
     myFile.open("TuSonrisa.txt");
 
+    Hash hash(7);
+
     while (myFile >> input)
     {
-        intVector.push_back(input);
-        cout << intVector[m] << "  ";
+        stringVector.push_back(input);
+        // cout << stringVector[m] << "  ";
         m++;
     }
     myFile.close();
+
+    // int num = sizeof(stringVector) / sizeof(stringVector[0]);
+    int num = stringVector.size();
+    for (int i = 0; i < num; i++)
+    {
+        cout << "test";
+        hash.insertItem(stringVector[i]);
+    }
+    hash.display();
+    // cout << " " << sizeof(stringVector) << " " << sizeof(stringVector[0]) <<
+    //" " << stringVector.size();
 }
