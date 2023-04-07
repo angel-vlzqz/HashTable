@@ -3,8 +3,9 @@
 
 using namespace std;
 
-const int SIZE = 31; // making a constant size for the array
-const int HASH = 31; // this is my hash key
+// const prime size and hash value
+const int SIZE = 31;
+const int HASH = 31;
 
 struct node
 { // creating a struct node for the linked list
@@ -12,58 +13,61 @@ struct node
     node *next = NULL;
 };
 
-struct node *bucketArray[SIZE]; // a global array called bucketArray
+struct node *bucketArray[SIZE]; // global array that contains 31 nodes
 
 // O(1)
 void Hash::insert(string newData)
-{                                                        // linked list insert method
-    struct node *newNode = new node;                     // create a new node
-    newNode->data = newData;                             // setting the data
-    newNode->next = bucketArray[hashIt(newData) % HASH]; // the hashing
-    bucketArray[hashIt(newData) % HASH] = newNode;       // shifting in the array
+{
+    struct node *newNode = new node;
+    newNode->data = newData;                             // set data
+    newNode->next = bucketArray[hashIt(newData) % HASH]; // hash to find insert index
+    bucketArray[hashIt(newData) % HASH] = newNode;       // insert data
 }
 
 // O(1)
 bool Hash::find(string lookup)
-{                                  // there is a lot going on with the find  we pass in what we are looking for
-    struct node *temp;             // create a temp node
-    int x = hashIt(lookup) % HASH; // now we find the key with our hash function
-    temp = bucketArray[x];         // set temp as a node
-    if (bucketArray[x] == NULL)
-    { // if null empty
+{
+    struct node *temp;             // create temp node
+    int x = hashIt(lookup) % HASH; // find index in node array from the hash
+    temp = bucketArray[x];         // set temp as a node from node array
+
+    if (bucketArray[x] == NULL) // base case, checks in index if node array is empty
+    {
         cout << "Not here " << endl;
         return false;
     }
-    if (bucketArray[x]->data == lookup)
-    { // if data at the hash function value is same as lookup we found it!
+
+    if (bucketArray[x]->data == lookup) // base case, checks if first node has our data
+    {
         cout << lookup << " was found at index " << x << endl;
         return true;
     }
     else
-    { // we need  to check if the data may be in that index,  but in the chain so we need to step through the list
-        while (temp != NULL)
+    {
+        while (temp != NULL) // iterate through list to find our data
         {
             if (temp->data == lookup)
             {
                 cout << lookup << " was found at index " << x << endl;
                 return true;
             }
-            temp = temp->next; // moves the while loop to the end of the list
+            temp = temp->next;
         }
         return false;
     }
 }
+
 void Hash::display()
 {
-    struct node *temp; // this is like ½ of the lookup method
+    struct node *temp;
     for (int i = 0; i < SIZE; i++)
     {
-        int x = i % HASH; // just use the hash function to find index
+        int x = i % HASH; // hash to find index
         temp = bucketArray[x];
         cout << i << "-> ";
         while (temp != NULL)
         {
-            cout << temp->data << " "; // print it out
+            cout << temp->data << " ";
             temp = temp->next;
         }
         cout << endl;
@@ -74,7 +78,7 @@ int Hash::hashIt(string data)
 {
     int sum = 0;
 
-    for (int i = 0; i < data.length(); i++)
+    for (int i = 0; i < data.length(); i++) // sum every ASCII value for every index of the string
     {
         sum += data[i];
     }

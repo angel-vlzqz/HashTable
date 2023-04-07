@@ -21,7 +21,7 @@ int main()
     }
     myFile.close();
 
-    // insert string into hashmap
+    // insert string array into hash array
     for (int i = 0; i <= idx; i++)
     {
         hash.insert(song[i]);
