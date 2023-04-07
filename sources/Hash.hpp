@@ -1,5 +1,15 @@
 #pragma once
+#include <string>
 
-void insert(int newData);
-bool find(int lookup);
-void display();
+using namespace std;
+
+class Hash
+{
+public:
+    void insert(string newData);
+    bool find(string lookup);
+    void display();
+
+private:
+    int hashIt(string data);
+};

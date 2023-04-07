@@ -43,6 +43,21 @@
   "files.associations": {
     "string": "cpp",
     "filesystem": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "__locale": "cpp",
+    "__hash_table": "cpp",
+    "__string": "cpp",
+    "__tree": "cpp",
+    "string_view": "cpp",
+    "streambuf": "cpp",
+    "deque": "cpp",
+    "functional": "cpp",
+    "list": "cpp",
+    "map": "cpp",
+    "set": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "vector": "cpp",
+    "*.tcc": "cpp"
   }
 }

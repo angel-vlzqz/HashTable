@@ -1,32 +1,33 @@
 #include <iostream>
+#include "Hash.hpp"
 
 using namespace std;
 
-const int SIZE = 11; // making a constant size for the array
-const int HASH = 11; // this is my hash key
+const int SIZE = 31; // making a constant size for the array
+const int HASH = 31; // this is my hash key
 
 struct node
 { // creating a struct node for the linked list
-    int data;
+    string data;
     node *next = NULL;
 };
 
 struct node *bucketArray[SIZE]; // a global array called bucketArray
 
-void insert(int newData)
+void Hash::insert(string newData)
 { // linked list insert method
     int myVal = 0;
-    struct node *newNode = new node;             // create a new node
-    newNode->data = newData;                     // setting the data
-    newNode->next = bucketArray[newData % HASH]; // the hashing
-    bucketArray[newData % HASH] = newNode;       // shifting in the array
+    struct node *newNode = new node;                     // create a new node
+    newNode->data = newData;                             // setting the data
+    newNode->next = bucketArray[hashIt(newData) % HASH]; // the hashing
+    bucketArray[hashIt(newData) % HASH] = newNode;       // shifting in the array
 }
 
-bool find(int lookup)
-{                          // there is a lot going on with the find  we pass in what we are looking for
-    struct node *temp;     // create a temp node
-    int x = lookup % HASH; // now we find the key with our hash function
-    temp = bucketArray[x]; // set temp as a node
+bool Hash::find(string lookup)
+{                                  // there is a lot going on with the find  we pass in what we are looking for
+    struct node *temp;             // create a temp node
+    int x = hashIt(lookup) % HASH; // now we find the key with our hash function
+    temp = bucketArray[x];         // set temp as a node
     if (bucketArray[x] == NULL)
     { // if null empty
         cout << "Not here " << endl;
@@ -52,7 +53,7 @@ bool find(int lookup)
         return false;
     }
 }
-void display()
+void Hash::display()
 {
     struct node *temp; // this is like ½ of the lookup method
     for (int i = 0; i < SIZE; i++)
@@ -67,4 +68,17 @@ void display()
         }
         cout << endl;
     }
+}
+
+int Hash::hashIt(string data)
+{
+    string myVal = data;
+    int sum = 0;
+
+    for (int i = 0; i < myVal.length(); i++)
+    {
+        sum += myVal[i];
+    }
+
+    return sum;
 }
