@@ -14,6 +14,7 @@ struct node
 
 struct node *bucketArray[SIZE]; // a global array called bucketArray
 
+// O(1)
 void Hash::insert(string newData)
 {                                                        // linked list insert method
     struct node *newNode = new node;                     // create a new node
@@ -22,6 +23,7 @@ void Hash::insert(string newData)
     bucketArray[hashIt(newData) % HASH] = newNode;       // shifting in the array
 }
 
+// O(1)
 bool Hash::find(string lookup)
 {                                  // there is a lot going on with the find  we pass in what we are looking for
     struct node *temp;             // create a temp node
