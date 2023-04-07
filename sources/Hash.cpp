@@ -58,6 +58,7 @@ void display()
     {
         int x = i % HASH; // just use the hash function to find index
         temp = bucketArray[x];
+        cout << i << "-> ";
         while (temp != NULL)
         {
             cout << temp->data << " "; // print it out
