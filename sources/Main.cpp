@@ -11,7 +11,9 @@ int main()
     int idx = 0;
     string input;
     string song[500];
+    Hash hash;
 
+    // read from file into string array
     while (!myFile.eof())
     {
         myFile >> song[idx];
@@ -19,12 +21,15 @@ int main()
     }
     myFile.close();
 
-    Hash hash;
-
+    // insert string into hashmap
     for (int i = 0; i <= idx; i++)
     {
         hash.insert(song[i]);
     }
 
+    // display
     hash.display();
+
+    //find string
+    hash.find("veo");
 }

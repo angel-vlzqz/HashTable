@@ -15,8 +15,7 @@ struct node
 struct node *bucketArray[SIZE]; // a global array called bucketArray
 
 void Hash::insert(string newData)
-{ // linked list insert method
-    int myVal = 0;
+{                                                        // linked list insert method
     struct node *newNode = new node;                     // create a new node
     newNode->data = newData;                             // setting the data
     newNode->next = bucketArray[hashIt(newData) % HASH]; // the hashing
@@ -31,12 +30,11 @@ bool Hash::find(string lookup)
     if (bucketArray[x] == NULL)
     { // if null empty
         cout << "Not here " << endl;
-        ;
         return false;
     }
     if (bucketArray[x]->data == lookup)
     { // if data at the hash function value is same as lookup we found it!
-        cout << "found at index " << x << endl;
+        cout << lookup << " was found at index " << x << endl;
         return true;
     }
     else
@@ -45,7 +43,7 @@ bool Hash::find(string lookup)
         {
             if (temp->data == lookup)
             {
-                cout << "found at index " << x << endl;
+                cout << lookup << " was found at index " << x << endl;
                 return true;
             }
             temp = temp->next; // moves the while loop to the end of the list
@@ -72,12 +70,11 @@ void Hash::display()
 
 int Hash::hashIt(string data)
 {
-    string myVal = data;
     int sum = 0;
 
-    for (int i = 0; i < myVal.length(); i++)
+    for (int i = 0; i < data.length(); i++)
     {
-        sum += myVal[i];
+        sum += data[i];
     }
 
     return sum;
