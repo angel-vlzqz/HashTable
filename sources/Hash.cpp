@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 const int SIZE = 11; // making a constant size for the array

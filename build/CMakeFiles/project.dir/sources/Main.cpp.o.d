@@ -208,4 +208,9 @@ CMakeFiles/project.dir/sources/Main.cpp.o: \
  /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/ostream.tcc \
  /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/istream \
  /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/istream.tcc \
+ /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/fstream \
+ /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/codecvt.h \
+ /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/aarch64-apple-darwin21/bits/basic_file.h \
+ /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/aarch64-apple-darwin21/bits/c++io.h \
+ /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/fstream.tcc \
  /Users/vlzqz/school/AVelazquez-project7/sources/Hash.hpp

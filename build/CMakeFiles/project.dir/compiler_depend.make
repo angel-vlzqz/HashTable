@@ -420,10 +420,21 @@ CMakeFiles/project.dir/sources/Main.cpp.o: /Users/vlzqz/school/AVelazquez-projec
   /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/ostream.tcc \
   /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/istream \
   /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/istream.tcc \
+  /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/fstream \
+  /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/codecvt.h \
+  /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/aarch64-apple-darwin21/bits/basic_file.h \
+  /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/aarch64-apple-darwin21/bits/c++io.h \
+  /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/fstream.tcc \
   /Users/vlzqz/school/AVelazquez-project7/sources/Hash.hpp
 
 
 /Users/vlzqz/school/AVelazquez-project7/sources/Hash.hpp:
+
+/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/fstream.tcc:
+
+/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/aarch64-apple-darwin21/bits/basic_file.h:
+
+/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/codecvt.h:
 
 /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/istream:
 
@@ -432,6 +443,8 @@ CMakeFiles/project.dir/sources/Main.cpp.o: /Users/vlzqz/school/AVelazquez-projec
 /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/locale_facets.tcc:
 
 /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/aarch64-apple-darwin21/bits/ctype_inline.h:
+
+/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/fstream:
 
 /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/bits/streambuf_iterator.h:
 
@@ -502,6 +515,8 @@ CMakeFiles/project.dir/sources/Main.cpp.o: /Users/vlzqz/school/AVelazquez-projec
 /opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/aarch64-apple-darwin21/bits/gthr.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/machine/_mcontext.h:
+
+/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/aarch64-apple-darwin21/bits/c++io.h:
 
 /Users/vlzqz/school/AVelazquez-project7/sources/Main.cpp:
 
